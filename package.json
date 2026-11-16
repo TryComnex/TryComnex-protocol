@@ -1,0 +1,13 @@
+{
+  "name": "comnex",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Comnex - say it on X, settle it on Solana.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "gates": "node scripts/gates.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}

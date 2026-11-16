@@ -1,0 +1,42 @@
+/* ==========================================================================
+   tokens.css — the ONLY file allowed to hold colour literals.
+   PROVENANCE (sampled with PIL from brand/ assets, mode of matching pixels):
+   --c-bg    #0c0c0c  mode of dark field pixels, brand/LOGO COMNEX JPG (452k px of 12,12,12)
+   --c-white #fefefe  mode of mark pixels, brand/LOGO COMNEX JPG (254,254,254)
+   --c-lime  #b7f205  mean of circuit-trace pixels, brand/LOGO COMNEX JPG (183.3,242.5,5.4)
+   --c-mint  #00ffcc  NOT sampled — dictated by the build brief for the own-token pulse only.
+   Every other shade below is a color-mix() of these four. No other hex exists.
+   Layout numbers (radii, gaps, easing, type scale) follow the studied reference
+   stylesheet: r 24 / r-sm 14 / gap 12 / ease .22,1,.36,1 / 13.5px body.
+   ========================================================================== */
+:root {
+  --c-bg: #0c0c0c;
+  --c-white: #fefefe;
+  --c-lime: #b7f205;
+  --c-mint: #00ffcc;
+
+  --color-accent: var(--c-lime);
+  --bg: var(--c-bg);
+  --panel: color-mix(in srgb, var(--c-white) 2.5%, var(--c-bg));
+  --raised: color-mix(in srgb, var(--c-white) 8%, var(--c-bg));
+  --inset: color-mix(in srgb, var(--c-white) 4.5%, transparent);
+  --inset-hi: color-mix(in srgb, var(--c-white) 9%, transparent);
+  --line: color-mix(in srgb, var(--c-white) 7%, transparent);
+  --line-2: color-mix(in srgb, var(--c-white) 14%, transparent);
+  --text: var(--c-white);
+  --muted: color-mix(in srgb, var(--c-white) 64%, var(--c-bg));
+  --dim: color-mix(in srgb, var(--c-white) 42%, var(--c-bg));
+  --up: var(--c-lime);
+  --down: color-mix(in srgb, var(--c-white) 58%, var(--c-bg));
+  --shadow-ink: color-mix(in srgb, var(--c-bg) 85%, transparent);
+
+  --r: 24px;
+  --r-sm: 14px;
+  --r-btn: 13px;
+  --gap: 12px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, monospace;
+  --top-h: 64px;
+}
+@media (max-width: 900px) { :root { --top-h: 56px; } }
